@@ -12,6 +12,8 @@ export class EmployeeListComponent implements OnInit{
   
   employees: Employee[];
 
+  constructor(){};
+
   ngOnInit(): void {
     this.employees = [
       {
