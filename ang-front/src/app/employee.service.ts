@@ -1,17 +1,17 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Employee } from './employee';
+import { from, Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
+  
+  constructor() { }
 
-  private baseURL = "http://localhost:8080/employee/get";
-  constructor(private httpClient: HttpClient) { }
-
-  getEmployeesList() : Observable<Employee[]>{
-    return this.httpClient.get<Employee[]>(`${this.baseURL}`);
+  getEmployeesList() : Observable<any>{
+    return from(fetch('http://localhost:8080/employee/get').then(response => response.json()));
   }
+
+  
 }
