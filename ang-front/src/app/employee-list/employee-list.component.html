@@ -8,12 +8,12 @@
         </tr>
     </thead>
     <tbody>
+        @for (employee of employees; track $index) {
         <tr>
-            @for (employee of employees; track $index) {
-                <td>{{employee.firstName}}</td>
-                <td>{{employee.lastName}}</td>
-                <td>{{employee.emailId}}</td>
-            }
+           <td>{{employee.firstName}}</td>
+           <td>{{employee.lastName}}</td>
+           <td>{{employee.emailId}}</td>
         </tr>
+    }
     </tbody>
 </table>
