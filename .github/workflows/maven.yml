@@ -36,7 +36,7 @@ jobs:
       env:
         RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
       run: |
-        curl -X POST "https://api.render.com/v1/services/your-service-id/deploy" \
+        curl -X POST "https://api.render.com/v1/services/https://fullstack-7fwv.onrender.com/deploy" \
           -H "Authorization: Bearer $RENDER_API_KEY"
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
