@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: spring-boot-backend
+    env: java
+    buildCommand: mvn clean install
+    startCommand: java -jar target/fullstack-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: PORT
+        value: 8080
+    plan: free
+    serviceDetails:
+      rootDir: fullstack
