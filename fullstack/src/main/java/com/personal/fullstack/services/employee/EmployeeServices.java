@@ -7,4 +7,6 @@ public interface EmployeeServices {
     
     public List<Employee> getEmployee();
 
+    public Employee saveEmployee(Employee employee);
+
 }
